@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -53,11 +53,48 @@
   cursor: pointer;
   font-size: 20px;
 }
-.header-content button .btn{
-    margin-left: 10px; 
+.header-content button .btn {
+  margin-left: 10px;
 }
-.header-content button:hover{
-    background-color: RoyalBlue;
+.header-content button:hover {
+  background-color: RoyalBlue;
 }
 
 /* Portfolio Content */
+.portfolio {
+  margin: 15px;
+}
+.portfolio h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 10px;
+  color: #757575;
+}
+.portfolio hr{
+    color: #757575;
+}
+.portfolio .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 25px;
+  text-align: center;
+}
+.portfolio .column {
+  flex: 35%;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+.portfolio .column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 900px) {
+  .portfolio .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
