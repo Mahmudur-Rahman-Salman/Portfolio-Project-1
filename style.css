@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -71,10 +71,10 @@
   padding: 10px;
   color: #757575;
 }
-.portfolio hr{
-    color: #757575;
-    opacity: .3;
-    margin: 10px;
+.portfolio hr {
+  color: #757575;
+  opacity: 0.3;
+  margin: 10px;
 }
 .portfolio .row {
   display: flex;
@@ -84,7 +84,6 @@
 }
 .portfolio .column {
   flex: 35%;
-  justify-content: space-between;
   padding: 0 4px;
 }
 .portfolio .column img {
@@ -99,4 +98,143 @@
     flex: 100%;
     max-width: 100%;
   }
+}
+
+/* About */
+.about {
+  margin: 15px;
+}
+.about h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 10px;
+  color: #757575;
+}
+.about hr {
+  color: #757575;
+  opacity: 0.3;
+  margin: 10px;
+}
+.about p {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 15px;
+  color: #757575;
+}
+.myskills {
+  margin: 15px;
+}
+.myskills h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 10px;
+  color: #757575;
+}
+.myskills .progressbar-heading {
+  margin: 15px;
+}
+.myskills .progressbar-heading h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 10px;
+  color: #757575;
+}
+#myProgress {
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+#myBar1 {
+  width: 80%;
+  height: 30px;
+  background-color: #616161;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+#myBar2 {
+  width: 70%;
+  height: 30px;
+  background-color: #616161;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+#myBar3 {
+  width: 90%;
+  height: 30px;
+  background-color: #616161;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+.myskills button {
+  background-color: #616161;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.myskills button:hover {
+  background-color: #757575;
+}
+.myskills button .btn {
+  margin-left: 10px;
+}
+
+/* section counter */
+/* Float four columns side by side */
+.section-counter{
+  margin: 15px;
+}
+.section-counter .column {
+  
+  width: 35%;
+  padding: 5px 5px;
+}
+
+.section-counter .row {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+}
+
+/* Clear floats after the columns */
+.section-counter .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 900px) {
+  .section-counter .row {
+    
+    display: block;
+    margin-bottom: 10px;
+  }
+  .section-counter .column {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* Style the counter cards */
+.section-counter .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #444;
+  color: white;
+}
+
+.section-counter .fa {
+  font-size: 50px;
 }
