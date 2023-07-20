@@ -3,6 +3,56 @@
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
+/* Open Nav Icon */
+.openNavIcon {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  font-size: 50px;
+  background-color: white;
+  padding: 10px;
+}
+.openNavIcon:hover {
+  background-color: #757575;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
 
 /* sidebar image */
 .sidebar {
@@ -17,8 +67,9 @@
 
 .sidebar .bgimg {
   width: 100%;
-  height: auto;
+  height: 100%;
   background-repeat: no-repeat;
+  object-fit: cover;
 }
 /* Main content */
 .main {
@@ -31,6 +82,23 @@
   padding: 20%;
   text-align: center;
 }
+.glow {
+  color: #fff;
+  background-color: black;
+  animation: glow .5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #141414,
+      0 0 40px #141414, 0 0 50px #141414, 0 0 60px #141414, 0 0 70px #141414;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #8bb8f3, 0 0 40px #8bb8f3,
+      0 0 50px #8bb8f3, 0 0 60px #8bb8f3, 0 0 70px #8bb8f3, 0 0 80px #8bb8f3;
+  }
+}
 .header-content h1 {
   font-family: "Roboto", sans-serif;
   font-size: 30px;
@@ -42,6 +110,13 @@
   font-size: 20px;
   font-weight: 300;
   padding: 5px;
+}
+.header-content .bgimg {
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  display: none;
+  margin-top: 30px;
 }
 .header-content button {
   background-color: DodgerBlue;
@@ -352,5 +427,92 @@
 @media only screen and (max-width: 900px) {
   .price-section .column {
     flex: 100%;
+  }
+}
+
+/* form section */
+.contact {
+  margin: 15px;
+  padding-top: 30px;
+}
+.contact h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 20px;
+  color: #757575;
+}
+
+.contact .container [type="text"],
+select,
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+.contact .container [type="email"] {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+.contact .container input[type="submit"] {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+.contact .container input[type="submit"]:hover {
+  background-color: #616161;
+}
+
+/* Add a background color and some padding around the form */
+.contact .container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 15px;
+}
+
+.footer {
+  background-color: #f1f1f1;
+  color: #757575;
+  padding: 50px;
+}
+.footer .icon {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 20px;
+}
+.footer p {
+  text-align: center;
+  padding: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .sidebar .bgimg {
+    display: none;
+  }
+  .main {
+    margin-left: 0;
+  }
+  .header-content .bgimg {
+    display: block;
   }
 }

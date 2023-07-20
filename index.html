@@ -20,14 +20,26 @@
 
     <!-- Contents -->
     <div class="main">
+      <!-- Sidenav -->
+      <span class="openNavIcon" onclick="openNav()">&#9776;</span>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <a href="#Home" onclick="closeNav()">Home</a>
+        <a href="#Portfolio" onclick="closeNav()">Portfolio</a>
+        <a href="#About" onclick="closeNav()">About</a>
+        <a href="#Contact" onclick="closeNav()">Contact</a>
+      </div>
       <!-- header content -->
-      <header class="header-content">
-        <h1 class="">Mahmudur Rahman Salman</h1>
+      <header class="header-content" id="Home">
+        <h1 class="glow">Mahmudur Rahman Salman</h1>
         <p>Front End Developer</p>
         <button>Download Resume<i class="fa fa-download btn"></i></button>
+        <img class="bgimg" src="/Image/1671896496297.jpg" alt="side image" />
       </header>
       <!--Portfolio content-->
-      <div class="portfolio">
+      <div class="portfolio" id="Portfolio">
         <h2>My Portfolio</h2>
         <hr />
         <div class="row">
@@ -43,7 +55,7 @@
       </div>
 
       <!-- About -->
-      <div class="about">
+      <div class="about" id="About">
         <h2>About</h2>
         <hr />
         <div>
@@ -157,6 +169,58 @@
             </ul>
           </div>
         </div>
+      </div>
+      <!-- contact -->
+      <div class="contact" id="Contact">
+        <h2>Contact</h2>
+        <div class="container">
+          <form>
+            <label for="fname">Your Name</label>
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Your name.."
+            />
+
+            <label for="femail">Your Email</label>
+            <input
+              type="email"
+              id="fname"
+              name="email"
+              placeholder="Your email"
+            />
+
+            <label for="subject">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="subject"
+            />
+
+            <label for="subject">Message</label>
+            <textarea
+              id="subject"
+              name="subject"
+              placeholder="Write something.."
+              style="height: 200px"
+            ></textarea>
+
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+      <!-- footer -->
+      <div class="footer">
+        <div class="icon">
+          <i class="fa fa-instagram"></i>
+          <i class="fa fa-snapchat"></i>
+          <i class="fa fa-facebook"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-linkedin"></i>
+        </div>
+        <p>&copy Copyright all rights reserved by Salman</p>
       </div>
     </div>
 
